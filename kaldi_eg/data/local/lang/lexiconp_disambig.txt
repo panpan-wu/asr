@@ -1,0 +1,23 @@
+<UNK>	1.0	sil
+绿	1.0	l v4
+是	1.0	sh ix4
+阳春	1.0	ii iang2 ch un1
+烟	1.0	ii ian1
+景	1.0	j ing3
+大块	1.0	d a4 k uai4
+文章	1.0	uu un2 zh ang1
+的	1.0	d e5 #1
+的	1.0	d i2
+的	1.0	d i4
+底色	1.0	d i3 s e4
+四月	1.0	s iy4 vv ve4
+林	1.0	l in2
+峦	1.0	l uan2
+更是	1.0	g eng4 sh ix4
+得	1.0	d e2
+得	1.0	d e5 #2
+得	1.0	d ei3
+鲜活	1.0	x ian1 h uo2
+秀媚	1.0	x iu4 m ei4
+诗意	1.0	sh ix1 ii i4
+盎然	1.0	aa ang4 r an2

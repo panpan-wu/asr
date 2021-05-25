@@ -1,0 +1,17 @@
+# gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false "gmm-boost-silence --boost=1.25 1 exp/mono/14.mdl - |" "ark:gunzip -c exp/mono/fsts.1.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark,t:|gzip -c >exp/mono/ali.1.gz" 
+# Started at Tue May 25 08:27:50 CST 2021
+#
+gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false 'gmm-boost-silence --boost=1.25 1 exp/mono/14.mdl - |' 'ark:gunzip -c exp/mono/fsts.1.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark,t:|gzip -c >exp/mono/ali.1.gz' 
+gmm-boost-silence --boost=1.25 1 exp/mono/14.mdl - 
+LOG (gmm-boost-silence[5.5.901-a401]:main():gmm-boost-silence.cc:93) Boosted weights for 5 pdfs, by factor of 1.25
+LOG (gmm-boost-silence[5.5.901-a401]:main():gmm-boost-silence.cc:103) Wrote model to -
+apply-cmvn --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- 
+LOG (apply-cmvn[5.5.901-a401]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+add-deltas ark:- ark:- 
+LOG (gmm-align-compiled[5.5.901-a401]:main():gmm-align-compiled.cc:127) A11_000
+WARNING (gmm-align-compiled[5.5.901-a401]:AlignUtteranceWrapper():decoder-wrappers.cc:617) Retrying utterance A11_000 with beam 40
+LOG (gmm-align-compiled[5.5.901-a401]:main():gmm-align-compiled.cc:135) Overall log-likelihood per frame is -95.664 over 778 frames.
+LOG (gmm-align-compiled[5.5.901-a401]:main():gmm-align-compiled.cc:137) Retried 1 out of 1 utterances.
+LOG (gmm-align-compiled[5.5.901-a401]:main():gmm-align-compiled.cc:139) Done 1, errors on 0
+# Accounting: time=0 threads=1
+# Ended (code 0) at Tue May 25 08:27:50 CST 2021, elapsed time 0 seconds
