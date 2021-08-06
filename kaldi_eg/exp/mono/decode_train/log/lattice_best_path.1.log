@@ -1,0 +1,11 @@
+# lattice-depth-per-frame "ark:gunzip -c exp/mono/decode_train/lat.1.gz|" "ark,t:|gzip -c > exp/mono/decode_train/depth_tmp.1.gz" ark:- | lattice-best-path --acoustic-scale=0.1 ark:- ark:/dev/null "ark,t:|gzip -c >exp/mono/decode_train/ali_tmp.1.gz" 
+# Started at Wed Jun 16 06:49:09 CST 2021
+#
+lattice-best-path --acoustic-scale=0.1 ark:- ark:/dev/null 'ark,t:|gzip -c >exp/mono/decode_train/ali_tmp.1.gz' 
+lattice-depth-per-frame 'ark:gunzip -c exp/mono/decode_train/lat.1.gz|' 'ark,t:|gzip -c > exp/mono/decode_train/depth_tmp.1.gz' ark:- 
+LOG (lattice-depth-per-frame[5.5.901-a401]:main():lattice-depth-per-frame.cc:82) Done 1 lattices.
+LOG (lattice-best-path[5.5.901-a401]:main():lattice-best-path.cc:99) For utterance A11_000, best cost 83.0644 + 7364.38 = 7447.44 over 778 frames.
+LOG (lattice-best-path[5.5.901-a401]:main():lattice-best-path.cc:124) Overall cost per frame is 9.57255 = 0.106767 [graph] + 9.46578 [acoustic] over 778 frames.
+LOG (lattice-best-path[5.5.901-a401]:main():lattice-best-path.cc:128) Done 1 lattices, failed for 0
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Jun 16 06:49:09 CST 2021, elapsed time 0 seconds

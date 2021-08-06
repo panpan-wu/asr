@@ -1,0 +1,14 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono/graph/words.txt exp/mono/final.mdl exp/mono/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c > exp/mono/decode_train/lat.1.gz" 
+# Started at Wed Jun 16 06:49:08 CST 2021
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono/graph/words.txt exp/mono/final.mdl exp/mono/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c > exp/mono/decode_train/lat.1.gz' 
+add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- 
+LOG (apply-cmvn[5.5.901-a401]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
+A11_000 绿 得 烟 景 大块 文章 的 底色 四月 的 林 峦 更是 绿 得 鲜活 秀媚 诗意 盎然 
+LOG (gmm-latgen-faster[5.5.901-a401]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance A11_000 is -7.99488 over 778 frames.
+LOG (gmm-latgen-faster[5.5.901-a401]:main():gmm-latgen-faster.cc:176) Time taken 0.067502s: real-time factor assuming 100 frames/sec is 0.00867635
+LOG (gmm-latgen-faster[5.5.901-a401]:main():gmm-latgen-faster.cc:179) Done 1 utterances, failed for 0
+LOG (gmm-latgen-faster[5.5.901-a401]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -7.99488 over 778 frames.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Wed Jun 16 06:49:09 CST 2021, elapsed time 1 seconds
